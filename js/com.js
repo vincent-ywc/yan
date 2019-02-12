@@ -345,7 +345,7 @@ var loadingImage = (function() {
 // 文本内容
 var page_1 = {
 	id: 'page_1',
-	html :'<div class="arrow2"><img src="img/1.jpg"></div><div class="arrow"></div>'
+	html :'<div class="arrow2"><img src="img/timg (1).gif"></div><div class="arrow"></div>'
 },
 page_2 = {
 	id : 'page_2',
