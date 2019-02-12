@@ -1,0 +1,309 @@
+@charset "utf-8";
+
+body, dl, dd, h1, h2, h3, h4, h5, h6, p, form {
+	margin:0px;
+}
+/* 手机版使用 改变盒子模型 */
+section, article, nav, aside, footer, header, div, p {
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+}
+ul, ol {
+	list-style:none;
+	margin:0px;
+	padding:0px;
+}
+html, body {
+	font-size:625%;
+    -webkit-user-select: 100%;   /* 禁止选中文本 */
+    user-select: 100%;
+    -webkit-text-size-adjust: 100%;	/* iphone禁用文字大小调整 */
+}
+body {
+	font:.14rem/1.5 "Helvetica Neue", Helvetica, STHeiTi,Microsoft YaHei, sans-serif, Microsoft JhengHei, Arial;
+	background:#fff;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-weight:normal;
+}
+/* 清除点击出现虚拟框 */
+a{
+	outline:none;
+	text-decoration:none;
+	-webkit-tap-highlight-color:rgba(255,0,0,0);
+}
+a:focus{
+	outline:0;
+}
+a:link,a:visited {
+	color:#333;
+	text-decoration:none;
+}
+a img {
+	border:none;
+}
+a, img {
+    -webkit-touch-callout: none; /* 禁止长按链接与图片弹出菜单 */
+}
+input,textarea,select {
+	outline:none;
+	-webkit-appearance:none;	/* 清除 iphone 中 input 默认样式 */
+}
+html, body, .container {
+	width:100%;
+	height:100%;
+	overflow:hidden;
+}
+.main {
+	position:relative;
+	height:100%;
+}
+.box {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-perspective: 1000;
+	perspective: 1000;
+}
+ .vertical {
+ 	display:none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: #1FACE2;
+	z-index: 99999;
+}
+.vertical p {
+	position: absolute;
+	color: #fff;
+	top: 50%;
+	left: 50%;
+	width:310px;
+	padding: 10px 0;
+	font-size: .2rem;
+	border:1px solid #fff;
+	text-align:center;
+	-webkit-transform:translate(-50%,-60%);
+	transform:translate(-50%,-60%);
+} 
+#audioPlay {
+	position:absolute;
+	right:15px;
+	top:15px;
+	width:30px;
+	height:30px;
+	z-index:999;
+	background:url(../img/music.png) no-repeat;
+	background-size:100% auto;
+	-webkit-tap-highlight-color:rgba(255,0,0,0);
+	-webkit-animation: audioPlay 1.2s infinite linear;
+	animation: audioPlay 1.2s infinite linear;
+}
+#audioPlay.off {
+	-webkit-animation: none;
+	animation: none;
+}
+@-webkit-keyframes audioPlay {
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+@keyframes audioPlay {
+	100% {
+		transform: rotate(360deg);
+	}
+}
+.arrow {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  width: 40px;
+  height: 22px;
+  margin-left: -20px;
+  background: url(../img/arrow.png) no-repeat;
+  background-size: 100% auto;
+  z-index: 99;
+  -webkit-animation: arrowTop 1.2s infinite ease-in-out;
+  animation: arrowTop 1.2s infinite ease-in-out;
+}
+@-webkit-keyframes arrowTop {
+  0% {
+    opacity: .8;
+    -webkit-transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+  }
+}
+@keyframes arrowTop {
+  0% {
+    opacity: .8;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+/*loading加载*/
+.loading {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: 9999;
+}
+.loading_con {
+  position: relative;
+  top: 50%;
+  width: 200px;
+  text-align: center;
+  margin: 0 auto;
+  font-size: .15rem;
+  color: #333;
+  -webkit-transform: translateY(-60%);
+  transform: translateY(-60%);
+}
+.loading .loading_rate {
+  font-size: .2rem;
+  line-height: 1.2;
+  font-weight: bold;
+  margin-top: 5px;
+}
+.loading-person {
+	position:absolute;
+	top:-82px;
+	left:50%;
+	width:65px;
+	height:75px;
+	margin-left:-34px;
+	background:url(../img/loading.png) no-repeat;
+	background-size:630px auto;
+	-webkit-animation:runner .6s infinite steps(9);
+	animation:runner .6s infinite steps(9);
+}
+@-webkit-keyframes runner {
+	100% {background-position: -630px 0}
+}
+@keyframes runner {
+	100% {background-position: -630px 0}
+}
+
+/* 页面内容 */
+.page {
+	position:relative;
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	background:#20A4E2 url(../img/bg01.jpg) no-repeat center top;
+	background-size:100%;
+	background-size:cover;
+}
+.page_2 {
+	background-color:#30D6C2;
+	background-image:url(../img/bg02.jpg);
+}
+.page_3 {
+	background-color:#30D6C2;
+	background-image:url(../img/bg03.jpg);
+}
+.page_4 {
+	background-color:#FDA736;
+	background-image:url(../img/bg04.jpg);
+}
+.page_5 {
+	background-color:#FDA736;
+	background-image:url(../img/bg05.jpg);
+}
+.page_6 {
+	background-color:#28D2A3;
+	background-image:url(../img/bg06.jpg);
+}
+.page_7 {
+	background-color:#28D2A3;
+	background-image:url(../img/bg07.jpg);
+}
+.page_8 {
+	background-color:#F17A64;
+	background-image:url(../img/bg08.jpg);
+}
+.page_9 {
+	background-color:#F17A64;
+	background-image:url(../img/bg09.jpg);
+}
+.page_10 {
+	background-color:#FDA736;
+	background-image:url(../img/bg10.jpg);
+}
+.arrow2{
+	width:100%;
+	height:960px;
+	position:absolute;
+	top:0;
+	left:0;
+	-webkit-animation:fadeInRight 1.2s ease-in-out both;
+	animation:fadeInRight 1.2s ease-in-out both;
+}
+@-webkit-keyframes fadeInRight{0%{opacity:0;-webkit-transform:translate3d(100%,0,0);}100%{opacity:1;-webkit-transform:none;}}
+@keyframes fadeInRight{0%{opacity:0;transform:translate3d(100%,0,0)}100%{opacity:1;transform:none}}
+
+
+.arrow2>img{
+	width:100%;
+}
+
+@media only screen and (max-height:603px) {
+	.page {
+		background-size:100% 100%;
+		background-position:center 72%;
+	}
+	.page_1 {
+		background-position:center top;
+	} 
+}
+
+@media only screen and (max-height:504px) {
+	.page {
+		background-size:100% auto;
+		background-position:center 68%;
+	}
+	.page_1 {
+		background-position:center top;
+	} 
+}
+
+@media only screen and (max-height:568px) {
+	.page {
+		background-size:cover;
+		background-position:center top;
+	}
+	.page_1 {
+		background-position:center top;
+	} 
+}
+@media only screen and (max-height:480px) {
+	 .page {
+		background-size:100% 100%;
+	}
+	.page_1 {
+		background-size:cover;
+	}
+}
+@media only screen and (max-height:416px) {
+	.page {
+		background-size:100% 100%;
+	}
+	.page_1 {
+		background-size:100% 110%;
+	}
+}
