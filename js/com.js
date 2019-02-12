@@ -5,7 +5,7 @@ var load = document.getElementById('loading'),
 var loadingImage = (function() {
 
 	var img_list = [
-		'bg11.jpg', 'bg02.jpg', 'bg03.jpg', 'bg04.jpg', 'bg05.jpg', 'bg06.jpg', 'bg07.jpg', 'bg08.jpg', 'bg09.jpg', 'bg10.jpg', 'arrow.png'
+		'bg01.jpg', 'bg02.jpg', 'bg03.jpg', 'bg04.jpg', 'bg05.jpg', 'bg06.jpg', 'bg07.jpg', 'bg08.jpg', 'bg09.jpg', 'bg10.jpg', 'arrow.png'
 	];
 	var img_len = img_list.length,
 		imgPath = './img/',
